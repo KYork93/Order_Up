@@ -23,7 +23,16 @@ db.pubs.insert({
       drinksMenu: [{
         id:1,
         drinkName: 'Buckfast Daiquiri',
-        drinkSrc: 'https://pbs.twimg.com/media/CIljQtVWcAA-PMg.jpg'
+        drinkSrc: 'https://pbs.twimg.com/media/CIljQtVWcAA-PMg.jpg',
+        drinkPrice: 7.99
+      },
+      {
+        id: 2,
+        drinkName: 'Blue Moon',
+        drinkSrc: 'https://s-media-cache-ak0.pinimg.com/564x/77/62/50/7762508f14ff19acfc75b4a249f29d35.jpg',
+        drinkPrice: 4.50
       }]
     }
 )
+
+db.dropDatabase();
