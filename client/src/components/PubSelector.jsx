@@ -16,7 +16,7 @@ export default class PubSelector extends React.Component{
     })
 
     return(
-      <select classID="pub-selector">
+      <select classID="pub-selector" onChange={this.handlePubChange} value={this.state.selectedIndex}>
         {pubMap}
       </select>
     )
