@@ -1,5 +1,4 @@
 import React from 'react'
-import DrinkDetails from './DrinkDetails'
 
 export default class PubDetail extends React.Component{
 
@@ -13,9 +12,8 @@ export default class PubDetail extends React.Component{
       }
       return(
         <div className="pub-detail">
-
+          <h1>{this.props.pubDetail.pubName}</h1>
         </div>
       )
-
-    }
+  }
 }

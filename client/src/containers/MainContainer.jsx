@@ -1,6 +1,7 @@
 import React from 'react'
 import PubSelector from '../components/PubSelector'
 import PubDetail from '../components/PubDetail'
+import DrinkDetails from '../components/DrinkDetails'
 
 export default class MainContainer extends React.Component{
 
@@ -54,6 +55,7 @@ export default class MainContainer extends React.Component{
       <div className="main-container">
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
+        <DrinkDetails drinkDetail={this.state.focusPub} />
       </div>
     )
   }

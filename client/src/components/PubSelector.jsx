@@ -11,7 +11,7 @@ export default class PubSelector extends React.Component{
   }
 
   render(){
-    var pubMap = this.props.pubChoices.map(function(pub, index){
+    var pubMap = this.props.pubChoices.map((pub, index) => {
       return <option key={pub.id} value={index}>{pub.pubName}</option>
     })
 
