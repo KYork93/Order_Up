@@ -1,5 +1,6 @@
 import React from 'react'
 import PubSelector from '../components/PubSelector'
+import PubDetail from '../components/PubDetail'
 
 export default class MainContainer extends React.Component{
 
@@ -41,17 +42,23 @@ export default class MainContainer extends React.Component{
             drinkSrc: 'https://s-media-cache-ak0.pinimg.com/564x/77/62/50/7762508f14ff19acfc75b4a249f29d35.jpg',
             price: 4.50
           }]
-        }]
-
+        }],
+      focusPub: null
     }
+
+    this.selectedPub = this.selectedPub.bind(this)
   }
 
   render(){
     return(
-      <PubSelector pubChoices={this.state.pubs} />
+      <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
+      <PubDetails pubDetail={this.state.focusPub} />
     )
   }
 
+  selectedPub(pub){
+    this.setState({focusPub: pub})
+  }
 
 
 }
