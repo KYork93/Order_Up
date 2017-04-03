@@ -1,0 +1,50 @@
+Bars:
+id: 1
+name: Lebowski's
+lat: 55.945979
+lng: -3.206510
+src: http://farm7.static.flickr.com/6209/6128315560_f2fd0abf4a.jpg
+
+
+id: 2
+name: Paradise Palms
+lat: 55.946272
+lng: -3.189225
+src: http://files.stv.tv/imagebase/300/605x454/300373-paradise-palms-lothian-street.jpg
+
+
+Lebowski's:
+id: 1
+name: White Russian
+src: http://www.kahlua.com/globalassets/classic-cocktails/white-russian/kahlua-white-russian-highlighted.png/CocktailHighlight
+price: 6.99
+
+id: 2
+name: Budweiser
+src: https://s3-eu-central-1.amazonaws.com/centaur-wp/creativereview/prod/content/uploads/2016/01/2011budweiser-can.jpg
+price: 4.50
+
+Paradise Palms:
+id: 1
+name: Buckfast Daiquiri
+src: https://pbs.twimg.com/media/CIljQtVWcAA-PMg.jpg
+price: 7.99
+
+id: 2
+name: Blue Moon
+src: https://s-media-cache-ak0.pinimg.com/564x/77/62/50/7762508f14ff19acfc75b4a249f29d35.jpg
+price: 4.50
+
+Current Round:
+id: 2
+bar_id: 1
+product_id: 1
+total_price: 6.99
+
+
+Past Rounds:
+id: 1
+bar_id: 1
+product_id: 2
+total_price: 4.50
+order_at: 03/04/2017, 21:12
