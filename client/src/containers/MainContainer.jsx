@@ -2,6 +2,7 @@ import React from 'react'
 import PubSelector from '../components/PubSelector'
 import PubDetail from '../components/PubDetail'
 import DrinkDetails from '../components/DrinkDetails'
+import CurrentRound from '../components/CurrentRound'
 
 export default class MainContainer extends React.Component{
 
@@ -55,6 +56,7 @@ export default class MainContainer extends React.Component{
   render(){
     return(
       <div className="main-container">
+        <CurrentRound currentRound={this.state.drinksRound} />
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
         <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound}/>
@@ -67,7 +69,9 @@ export default class MainContainer extends React.Component{
   }
 
   addDrinkToRound(drink){
-    this.state.drinksRound.push(drink)
+    this.setState({
+      drinksRound: this.state.drinksRound.concat([drink])
+    })
   }
 
 
