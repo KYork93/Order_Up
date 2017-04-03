@@ -5,8 +5,6 @@ export default class DrinkDetails extends React.Component{
   constructor(props){
     super(props)
 
-
-
     this.handleAddButtonClick = this.handleAddButtonClick.bind(this)
   }
 
@@ -20,8 +18,8 @@ export default class DrinkDetails extends React.Component{
         <div className="drink-detail" key={index}>
           <img src={drink.drinkSrc} />
           <h2>{drink.drinkName}</h2>
-          <h3>{drink.price}</h3>
-          <button onClick={this.handleAddButtonClick} value={drink}>Add to Round</button>
+          <h3>Price: {drink.price}</h3>
+          <button onClick={this.handleAddButtonClick} value={drink.drinkName}>Add to Round</button>
         </div>
       )
     })
@@ -34,7 +32,9 @@ export default class DrinkDetails extends React.Component{
   }
 
   handleAddButtonClick(event){
-    console.log(event.target.value);
+    let drinkToAdd = event.target.value
+
+    this.props.addDrink(drinkToAdd)
   }
 
 }

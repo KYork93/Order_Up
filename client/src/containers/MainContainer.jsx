@@ -24,7 +24,7 @@ export default class MainContainer extends React.Component{
             id: 2,
             drinkName: 'Budweiser',
             drinkSrc: 'https://s3-eu-central-1.amazonaws.com/centaur-wp/creativereview/prod/content/uploads/2016/01/2011budweiser-can.jpg',
-            price: 4.50
+            price: 4.49
           }]
         },
         {
@@ -41,13 +41,15 @@ export default class MainContainer extends React.Component{
             id: 2,
             drinkName: 'Blue Moon',
             drinkSrc: 'https://s-media-cache-ak0.pinimg.com/564x/77/62/50/7762508f14ff19acfc75b4a249f29d35.jpg',
-            price: 4.50
+            price: 4.49
           }]
         }],
-      focusPub: null
+      focusPub: null,
+      drinksRound: []
     }
 
     this.selectedPub = this.selectedPub.bind(this)
+    this.addDrinkToRound = this.addDrinkToRound.bind(this)
   }
 
   render(){
@@ -62,6 +64,10 @@ export default class MainContainer extends React.Component{
 
   selectedPub(pub){
     this.setState({focusPub: pub})
+  }
+
+  addDrinkToRound(drink){
+    this.state.drinksRound.push(drink)
   }
 
 
