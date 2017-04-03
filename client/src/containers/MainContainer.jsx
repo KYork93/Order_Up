@@ -55,7 +55,7 @@ export default class MainContainer extends React.Component{
       <div className="main-container">
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
-        <DrinkDetails drinkDetail={this.state.focusPub} />
+        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound}/>
       </div>
     )
   }
