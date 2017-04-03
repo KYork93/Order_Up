@@ -12,7 +12,7 @@ export default class PubSelector extends React.Component{
 
   render(){
     var pubMap = this.props.pubChoices.map(function(pub, index){
-      return <option key={index}>{pub.pubName}</option>
+      return <option key={pub.id} value={index}>{pub.pubName}</option>
     })
 
     return(
@@ -23,10 +23,10 @@ export default class PubSelector extends React.Component{
   }
 
   handlePubChange(event){
-    var newIndex = event.target.value;
-    this.setState({selectedIndex: newIndex});
+    var newIndex = event.target.value
+    this.setState({selectedIndex: newIndex})
 
-    var selectedPub = this.props.pubChoices[newIndex];
-    this.props.didSelectPub(selectedPub);
+    var selectedPub = this.props.pubChoices[newIndex]
+    this.props.didSelectPub(selectedPub)
   }
 }

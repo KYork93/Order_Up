@@ -51,8 +51,10 @@ export default class MainContainer extends React.Component{
 
   render(){
     return(
-      <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
-      <PubDetails pubDetail={this.state.focusPub} />
+      <div className="main-container">
+        <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
+        <PubDetail pubDetail={this.state.focusPub} />
+      </div>
     )
   }
 
