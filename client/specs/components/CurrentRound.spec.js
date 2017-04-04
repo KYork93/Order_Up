@@ -11,4 +11,11 @@ describe('Current Round', () => {
     expect(wrapper.find(".current-round").length).to.eq(1)
   })
 
+  it('should have props', () => {
+    const wrapper = mount(<CurrentRound />)
+
+    //has yet to receive its props via state
+    expect(wrapper.prop('currentRound')).to.equal(undefined);
+  })
+
 })
