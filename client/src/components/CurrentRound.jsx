@@ -8,7 +8,7 @@ export default class CurrentRound extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="current-round">
         <p>{this.props.currentRound}</p>
       </div>
     )
