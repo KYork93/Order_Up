@@ -24,7 +24,7 @@ describe('Main Container', () => {
     const wrapper = mount(<MainContainer />)
     expect(wrapper.state('focusPub')).to.equal(null)
     // empty array object
-    expect(wrapper.state('drinksRound').length).to.equal(0)
+    expect(wrapper.state('drinksRound')).to.deep.equal([])
   })
 
 })
