@@ -46,7 +46,8 @@ export default class MainContainer extends React.Component{
           }]
         }],
       focusPub: null,
-      drinksRound: []
+      drinksRound: [],
+      totalPrice: 0
     }
 
     this.selectedPub = this.selectedPub.bind(this)
@@ -59,7 +60,7 @@ export default class MainContainer extends React.Component{
         <CurrentRound currentRound={this.state.drinksRound} />
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
-        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound}/>
+        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound} addPrices={this.addToTotal}/>
       </div>
     )
   }
@@ -71,6 +72,12 @@ export default class MainContainer extends React.Component{
   addDrinkToRound(drink){
     this.setState({
       drinksRound: this.state.drinksRound.concat([drink])
+    })
+  }
+
+  addToTotal(drinkPrice){
+    this.setState({
+      totalPrice: this.state.totalPrice + drinkPrice
     })
   }
 

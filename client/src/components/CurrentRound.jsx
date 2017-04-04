@@ -7,11 +7,15 @@ export default class CurrentRound extends React.Component{
   }
 
   render(){
-    return(
-      <div className="current-round">
-        <p>{this.props.currentRound}</p>
-      </div>
-    )
+
+    if(this.props.currentRound){
+      var 
+      return(
+        <div className="current-round">
+          <p>{this.props.currentRound}</p>
+        </div>
+      )
+    }
   }
 
 }
