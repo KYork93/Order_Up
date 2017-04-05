@@ -30,6 +30,7 @@ export default class CurrentRound extends React.Component{
           {drinkAndNum}
         </ul>
         <h3>Total: £{this.props.total.toFixed(2)}</h3>
+        <button onClick={this.props.removeRound}>Start Again</button>
       </div>
     )
   }
