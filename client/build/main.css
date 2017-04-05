@@ -39,3 +39,7 @@ h1, h3{
   margin-right: 950px;
   margin-bottom: 20px;
 }
+
+select{
+  font-size: 25px;
+}
