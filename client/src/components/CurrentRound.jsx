@@ -9,10 +9,16 @@ export default class CurrentRound extends React.Component{
   render(){
 
     if(this.props.currentRound){
-      var 
+
+      var roundMap = this.props.currentRound.map
+
       return(
         <div className="current-round">
-          <p>{this.props.currentRound}</p>
+          <h3>Current Round</h3>
+          <ul>
+
+          </ul>
+          <h3>Total: £{this.props.total}</h3>
         </div>
       )
     }

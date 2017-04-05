@@ -57,10 +57,10 @@ export default class MainContainer extends React.Component{
   render(){
     return(
       <div className="main-container">
-        <CurrentRound currentRound={this.state.drinksRound} />
+        <CurrentRound currentRound={this.state.drinksRound} total={this.state.totalPrice}/>
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
-        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound} addPrices={this.addToTotal}/>
+        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound}/>
       </div>
     )
   }
@@ -69,15 +69,19 @@ export default class MainContainer extends React.Component{
     this.setState({focusPub: pub})
   }
 
-  addDrinkToRound(drink){
-    this.setState({
-      drinksRound: this.state.drinksRound.concat([drink])
+  addDrinkToRound(drinkName){
+    let map = this.state.pubs.map((pub) => {
+      pub.drinksMenu.map((drink) => {
+        if(drink.drinkName === drinkName){
+          this.setState({
+            totalPrice: this.state.totalPrice + drink.price
+          })
+        }
+      })
     })
-  }
 
-  addToTotal(drinkPrice){
     this.setState({
-      totalPrice: this.state.totalPrice + drinkPrice
+      drinksRound: this.state.drinksRound.concat([drinkName])
     })
   }
 

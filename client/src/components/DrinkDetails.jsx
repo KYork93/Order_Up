@@ -18,7 +18,7 @@ export default class DrinkDetails extends React.Component{
         <div className="drink-detail" key={index}>
           <img src={drink.drinkSrc} />
           <h2>{drink.drinkName}</h2>
-          <h3>Price: {drink.price}</h3>
+          <h3 classID="drink-price">{drink.price}</h3>
           <button onClick={this.handleAddButtonClick} value={drink.drinkName}>Add to Round</button>
         </div>
       )
