@@ -14,6 +14,7 @@ export default class MainContainer extends React.Component{
         {
           id: 1,
           pubName: 'Lebowskis',
+          pubAddress: '18 Morrison St, Edinburgh EH3 8BJ',
           pubSrc: 'http://farm7.static.flickr.com/6209/6128315560_f2fd0abf4a.jpg',
           drinksMenu: [{
             id: 1,
@@ -31,6 +32,7 @@ export default class MainContainer extends React.Component{
         {
           id: 2,
           pubName: 'Paradise Palms',
+          pubAddress: '41 Lothian St, Edinburgh EH1 1HB',
           pubSrc: 'http://files.stv.tv/imagebase/300/605x454/300373-paradise-palms-lothian-street.jpg',
           drinksMenu: [{
             id: 1,
@@ -55,6 +57,7 @@ export default class MainContainer extends React.Component{
   }
 
   render(){
+
     return(
       <div className="main-container">
         <CurrentRound currentRound={this.state.drinksRound} total={this.state.totalPrice}/>

@@ -2,3 +2,13 @@ img {
   width: 120px;
   height: 160px;
 }
+
+.pub-name{
+  margin:0;
+  margin-top:10px;
+}
+
+.pub-address{
+  margin:0;
+  margin-bottom: 10px;
+}

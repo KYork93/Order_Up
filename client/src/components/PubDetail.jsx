@@ -12,7 +12,8 @@ export default class PubDetail extends React.Component{
       }
       return(
         <div className="pub-detail">
-          <h1>{this.props.pubDetail.pubName}</h1>
+          <h1 className="pub-name">{this.props.pubDetail.pubName}</h1>
+          <h3 className="pub-address">&nbsp;&nbsp;{this.props.pubDetail.pubAddress}</h3>
         </div>
       )
   }
