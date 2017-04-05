@@ -54,16 +54,17 @@ export default class MainContainer extends React.Component{
 
     this.selectedPub = this.selectedPub.bind(this)
     this.addDrinkToRound = this.addDrinkToRound.bind(this)
+    this.startAgain = this.startAgain.bind(this)
   }
 
   render(){
 
     return(
       <div className="main-container">
-        <CurrentRound currentRound={this.state.drinksRound} total={this.state.totalPrice}/>
+        <CurrentRound currentRound={this.state.drinksRound} total={this.state.totalPrice} />
         <PubSelector pubChoices={this.state.pubs} didSelectPub={this.selectedPub} />
         <PubDetail pubDetail={this.state.focusPub} />
-        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound}/>
+        <DrinkDetails drinkDetail={this.state.focusPub} addDrink={this.addDrinkToRound} />
       </div>
     )
   }
@@ -87,6 +88,5 @@ export default class MainContainer extends React.Component{
       drinksRound: this.state.drinksRound.concat([drinkName])
     })
   }
-
 
 }

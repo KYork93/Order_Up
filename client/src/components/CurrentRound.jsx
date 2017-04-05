@@ -22,6 +22,7 @@ export default class CurrentRound extends React.Component{
         drinkAndNum.push(<li>{key} : {reduced[key]}</li>)
       }
     }
+
     return(
       <div className="current-round">
         <h3>Current Round</h3>
@@ -32,5 +33,6 @@ export default class CurrentRound extends React.Component{
       </div>
     )
   }
+
 
 }
