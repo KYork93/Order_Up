@@ -12,4 +12,6 @@ Made using JavaScript and React, with some UI testing using Enzyme, Chai and Moc
 
 ```npm test``` will run all test files ending in .spec.js
 
+Slight bug - Drink doesn't show up in list if just adding one
+
 *Kristie Yorkston*
