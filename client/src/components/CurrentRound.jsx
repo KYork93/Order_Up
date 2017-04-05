@@ -10,13 +10,15 @@ export default class CurrentRound extends React.Component{
 
     if(this.props.currentRound){
 
-      var roundMap = this.props.currentRound.map
+      var roundMap = this.props.currentRound.map((drink, index) => {
+       return  <li key={index}>{drink}</li>
+      })
 
       return(
         <div className="current-round">
           <h3>Current Round</h3>
           <ul>
-
+            {roundMap}
           </ul>
           <h3>Total: £{this.props.total}</h3>
         </div>
