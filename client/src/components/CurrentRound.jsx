@@ -25,12 +25,12 @@ export default class CurrentRound extends React.Component{
 
     return(
       <div className="current-round">
-        <h3>Current Round</h3>
+        <h3><i>Current Round</i></h3>
         <ul>
           {drinkAndNum}
         </ul>
         <h3>Total: £{this.props.total.toFixed(2)}</h3>
-        <button onClick={this.props.removeRound}>Start Again</button>
+        <button onClick={this.props.removeRound} className="start-again-btn">Start Again</button>
       </div>
     )
   }

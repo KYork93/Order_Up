@@ -8,7 +8,34 @@ img {
   margin-top:10px;
 }
 
-.pub-address{
-  margin:0;
-  margin-bottom: 10px;
+body{
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: 'Roboto Slab', serif
+}
+
+.start-again-btn{
+  margin-bottom: 20px;
+}
+
+.drink-detail{
+  margin-bottom: 20px;
+}
+
+.drink-name{
+  margin-bottom: 0;
+}
+
+#drink-price{
+  margin-top: 0px;
+}
+
+h1, h3{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pub-detail{
+  border-bottom: 1px solid black;
+  margin-right: 950px;
+  margin-bottom: 20px;
 }
